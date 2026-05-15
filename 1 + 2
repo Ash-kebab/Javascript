@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id = "A" > </p>    
+        
+        <script>
+          var car = "Cirrus Vision SF50 ";
+          var price = "3.2 Million ";
+          alert(car);
+          alert(price);
+          alert(car+price)
+          document.getElementById("A").innerHTML= car + price; 
+
+          
+
+        </script>
+    </body>
+</html>
