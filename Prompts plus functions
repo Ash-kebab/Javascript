@@ -114,3 +114,39 @@ olderYoungerOrSame(age)
  </script>
     </body>
 </html>
+
+//5
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+<p onclick = "onClick();" class= "para" >1</p>
+<p onclick = "onClick();" class = "para" >2</p>
+<p onclick = "onClick();" class = "para" >3</p>
+
+        <script>
+            var count = 0;
+        function onClick()
+         {
+            
+            var click = document.getElementsByClassName("para");
+            for(let i = 0 ; i < click.length ; i++)
+            {      
+                    if(count %2 == 0)   
+                    click[i].style.color="pink";
+                   else
+                   click[i].style.color="blue";
+
+
+            }
+            count++;
+
+        }   
+
+
+ </script>
+    </body>
+</html>
