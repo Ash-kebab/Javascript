@@ -1,0 +1,80 @@
+1//
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+<body>
+<button onclick="option();">Enter</button>
+<input id = "N" type ="text"/>
+
+<script>
+  function option(){  
+  let num = document.getElementById("N").value;
+  if(num == 1 )
+  {
+    alert("blue");
+    document.body.style.backgroundColor = "blue";
+
+  }
+  else 
+  {alert("green")
+    document.body.style.backgroundColor="green";
+  }
+
+  }
+ </script>
+    </body>
+</html>
+//2
+function text()
+{
+if(document.getElementById("N").value == "Background")
+{let val = prompt("What color?")
+  document.body.style.backgroundColor = val ;  
+}
+if(document.getElementById("N").value == "font color")
+{
+let val = prompt("What color?")
+document.getElementById("p").style.color = val ; 
+}
+if(document.getElementById("N").value == "new quote")
+{
+    let val = prompt("what do you want as quoute?")
+document.getElementById("p").innerHTML= val ;   
+}
+
+//3
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+<body>
+<button onclick="passcheck();">Enter</button>
+<input id = "N" type ="text"/>
+<input id = "T" type = "password">
+
+<p id = "p" >Graphs are a way of life</p>
+
+<script>
+
+
+function passcheck()
+{
+    
+let  use = "num";
+let  pass = "123";
+let pass1 = document.getElementById("N").value;
+
+let use1 = document.getElementById("T").value ;
+alert(pass1 + " " + use1);
+if (use == use1 && pass == pass1 )
+{
+    
+    window.open("https://en.wikipedia.org/wiki/Main_Page","_blank")
+}
+}
+ </script>
+    </body>
+</html>
