@@ -1,0 +1,106 @@
+1 // 
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+<body>
+<button id  = "b" onclick= "update();" >Enter</button>
+<input id = "N" type ="text"/>
+
+
+
+<script>
+    var color = 0;
+    function update(){
+    if(document.getElementById("N").value == "Button")
+    {
+        let b= document.createElement("button");
+        b.innerHTML = "Click Me";
+        b.setAttribute("onclick","cchange()");
+        document.body.appendChild(b);
+        
+                               
+    }
+    if(document.getElementById("N").value == "p")
+    {
+        let para = document.createElement("p");
+        para.innerHTML = "WOW , you actually never gave me up , let me down , run around or desert me !";
+        document.body.appendChild(para);
+                               
+    }
+    if(document.getElementById("N").value == "img")
+    {
+        let image = document.createElement("img");
+        image.setAttribute("src" , "https://i.insider.com/602ee9ced3ad27001837f2ac?width=700")
+        document.body.appendChild(image);
+                               
+    }
+    if(document.getElementById("N").value == "stop")
+    {
+        document.getElementById("N").remove();
+        document.getElementById("b").remove();
+
+    }
+    
+    }
+    function cchange() {
+        color++;
+        if(color > 1) color = 0;
+        if(color == 0) document.body.style.background = "red";
+        if(color == 1) document.body.style.background = "blue";
+
+    }
+
+
+ </script>
+    </body>
+</html>
+
+//2
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+<body>
+<button id  = "b" onclick= "update();" >Enter</button>
+
+
+
+
+<script>
+    var color = 0;
+    var num = 0;
+    function update(){
+
+        let ID = "h" +num;
+        let para = document.createElement("h2");
+        para.innerHTML = "Hello";
+        para.setAttribute("id", ID);
+        document.body.appendChild(para);
+        para.setAttribute("onclick","colornum('"+ID+"')");
+
+         
+        num++;
+    }
+ 
+    //Math.floor(Math.random()*256)
+
+    // 0<= x < 1 *256, 0<=x < 256, Math.floor(), 
+    function colornum (ID) {
+       let r =  Math.floor(Math.random()*256) ;
+       let g =  Math.floor(Math.random()*256) ;
+       let b =  Math.floor(Math.random()*256) ;
+       let size =  Math.floor(Math.random()*25)+10;
+       document.getElementById(ID).style.fontSize = size + "px";
+       let rgb = "rgb(" + r + "," + g + "," + b + ")";
+       document.getElementById(ID).style.color = rgb;
+        
+    }
+
+
+
+ </script>
+    </body>
+</html>
